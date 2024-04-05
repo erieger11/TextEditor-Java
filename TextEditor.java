@@ -38,6 +38,22 @@ class TextEditor extends Frame implements ActionListener {
                 new MenuItem("Run") };
         MenuItem mi4[] = { new MenuItem("Help Topics"),
                 new MenuItem("About TextEditor") };
+
+
+
+
+        
+        MenuItem fontChoice [] = { new MenuItem("Comic"), new MenuItem("Blackletter"),
+                new MenuItem("Typewriter"), new MenuItem("Monospaced"), new MenuItem("Display")};;
+
+                m3.add(fontChoice[])
+
+
+
+
+
+
+
         for (int i = 0; i < mi1.length; i++) {
             m1.add(mi1[i]);
             mi1[i].addActionListener(this);
@@ -62,6 +78,7 @@ class TextEditor extends Frame implements ActionListener {
         setTitle("untitled notepad");
         setVisible(true);
     }
+
 
     public void actionPerformed(ActionEvent ae) {
         String arg = (String) ae.getActionCommand();
@@ -154,6 +171,11 @@ class TextEditor extends Frame implements ActionListener {
             d1.setVisible(true);
             setSize(500, 500);
         }
+        if (arg.equals("Choose Font")){
+            MenuItem fontChoice [] = { new MenuItem("Comic"), new MenuItem("Blackletter"),
+                    new MenuItem("Typewriter"), new MenuItem("Monospaced"), new MenuItem("Display")};;
+        }
+
     }
     public static void main(String args[]) {
         TextEditor to = new TextEditor();
